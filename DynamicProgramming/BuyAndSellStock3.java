@@ -9,7 +9,7 @@ class Solution {
             dp[i][1][1]=-1;
             dp[i][1][2]=-1;
         }
-        return sol(prices,0,1,2,dp);
+        return sol(prices,0,1,2,dp); //number of transactions given is 2
     }
     public int sol(int[] prices,int index,int b,int t,int[][][] dp){
         if(t==0||index==prices.length)
