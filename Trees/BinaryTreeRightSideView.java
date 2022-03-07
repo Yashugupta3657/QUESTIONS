@@ -13,6 +13,7 @@
  *     }
  * }
  */
+//using while loop
 class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> sol=new ArrayList<>();
@@ -37,5 +38,26 @@ class Solution {
             }
         }
         return sol;
+    }
+}
+//using recursion
+class Solution {
+    int maxlvl;
+    List<Integer> k=new ArrayList<>();
+    public List<Integer> rightSideView(TreeNode root) {
+        maxlvl=0;
+        rightH(root,1);
+        return k;
+    }
+    public void rightH(TreeNode root,int curr){
+        if(root==null){
+            return;
+        }
+        if(maxlvl<curr){
+            maxlvl=curr;
+            k.add(root.val);
+        }
+        rightH(root.right,curr+1);
+        rightH(root.left,curr+1);
     }
 }
