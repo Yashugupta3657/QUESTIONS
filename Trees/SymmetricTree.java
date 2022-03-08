@@ -18,7 +18,7 @@ class Solution {
         if(root.left==null&&root.right==null){
             return true;
         }
-       return check(root.left,root.right);
+       return check(root.left,root.right); //no need to check for root as single node is always symmetric
     }
     public boolean check(TreeNode root1,TreeNode root2){
        if(root1==null&&root2==null)
